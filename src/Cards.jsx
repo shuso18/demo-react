@@ -11,7 +11,7 @@ const imgStyle = {
 const contStyle = {
     margin:'auto',
     width:'230px',
-    height:'325px',
+    height:'337px',
     backgroundColor: 'White',
     borderRadius:'10px',
     backgroundColor:'aliceblue',
@@ -24,7 +24,9 @@ const btnStyle = {
 }
 
 const thigal1 ={
-    marginTop:'-10px'
+    marginTop:'-10px',
+    fontFamily:"'EB Garamond', serif",
+    fontSize:'28px',
 }
 
 function Cards(props){
