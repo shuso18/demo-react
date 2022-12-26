@@ -1,55 +1,45 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
+import Cards from './Cards';
 
 
-var greet = "Good Afternoon";
-
-const dabba = {
-  width:"800px",
-  height:"80px",
-  margin:"auto",
-  backgroundColor:"aliceblue",
-  textAlign:"center",
-  marginTop:"340px",
-  borderRadius:"20px"
-}
-
-const rabba = {
-  fontWeight:"Bold",
-  color:"red",
-  paddingTop:"13.5px",
-  fontSize:"45px"
-}
-
-const dhabba = {
-  
-}
-
-const dt = new Date().getHours();
-
-
-if(dt >= 12 && dt < 19){
-  greet = "Good Afternoon";
-  dhabba.color = "orange";
-}
-else if( dt >=19){
-  greet = "Good Night";
-  dhabba.color = "black";
-  
-}
-else{
-  greet = "Good Morning";
-  dhabba.color = "green"
-}
-
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <>
-    <div style= {dabba}>
-        <h1 style={rabba}>Hello Shubham, <span style={dhabba}>{greet}</span> </h1>
-    </div>
-  </>,
-
-
-  document.getElementById("root")
+  <div className='hedd'><h1>Top 5 on Hotstar</h1></div>
+  <div className='bigcont'>
+  <Cards 
+    imgsrc='https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/4295/754295-v'
+    namesr='Avatar'
+    descrsr='A Disney-Hotstar Original Series'
+    linksr='https://www.hotstar.com/in/movies/avatar/1770000948'
+  />
+  <Cards 
+    imgsrc='https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/old_images/vertical/MOVIE/4189/1000074189/1000074189-v'
+    namesr='Drishyam'
+    descrsr='A Disney-Hotstar Original Series'
+    linksr='https://www.hotstar.com/in/movies/drishyam/1000074189'
+  />
+  <Cards 
+    imgsrc='https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/4954/894954-v'
+    namesr='The Good Wife'
+    descrsr='A Disney-Hotstar Original Series'
+    linksr='https://www.hotstar.com/in/movies/the-good-wife/1835045497'
+  />
+  <Cards 
+    imgsrc='https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/5541/675541-v'
+    namesr='The Jungle Book'
+    descrsr='A Disney-Hotstar Original Series'
+    linksr='https://www.hotstar.com/in/movies/the-jungle-book/1260018310'
+  />
+  <Cards 
+    imgsrc='https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/old_images/vertical/MOVIE/7441/1000087441/1000087441-v'
+    namesr='Masaan'
+    descrsr='A Disney-Hotstar Original Series'
+    linksr='https://www.hotstar.com/in/movies/masaan/1000087441'
+  />
+  </div>
+  </>
 );
+
